@@ -1,24 +1,60 @@
-<!-- Version 9 -->
+<!-- Version 10 -->
 <!doctype html>
 <html lang="sv">
 <head>
   <meta charset="utf-8">
-  <title>LIA-presentation</title>
+  <title>LIA-presentation – Conri Turesson</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Reveal.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css?v=9">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/black.css?v=9" id="theme">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/print/pdf.css?v=9" media="print">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css?v=10">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/white.css?v=10" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/print/pdf.css?v=10" media="print">
+
+  <!-- Font: Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    h1, h2, h3, p, li {
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    :root{
+      --brand-blue:#1e3a78;   /* rubriker */
+      --ink:#111;             /* brödtext */
+      --paper:#f7f8f3;        /* ljus pastel grön/beige bakgrund */
     }
-    .reveal section img {
-      max-height: 500px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+
+    /* Bas */
+    .reveal{ background-color: var(--paper); }
+    .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal p, .reveal li{
+      font-family: 'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+      letter-spacing: .2px;
+    }
+
+    /* Färger/typografi */
+    .reveal h1, .reveal h2, .reveal h3{ color: var(--brand-blue); }
+    .reveal p, .reveal li, .reveal table{ color: var(--ink); }
+    .reveal section{ text-align: left; }
+    .reveal ol, .reveal ul{ margin-left: 1.2em; }
+
+    /* Lätt skugga för läsbarhet mot bildbakgrunder */
+    .reveal .on-image{ text-shadow: 0 2px 6px rgba(0,0,0,.45); }
+
+    /* Logga nere till höger */
+    .logo{
+      position: fixed; right: 20px; bottom: 20px; width: 110px;
+      opacity: .9; z-index: 40; pointer-events: none;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,.35));
+    }
+
+    /* Kort kort */
+    .card{
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.75);
+      border-radius: 14px; padding: 14px 16px;
+      box-shadow: 0 6px 24px rgba(0,0,0,.08);
+    }
+
+    /* Mobil */
+    @media (max-width:560px){
+      .logo{ width: 84px; }
     }
   </style>
 </head>
@@ -27,9 +63,9 @@
 <div class="reveal">
   <div class="slides">
 
-    <!-- Start / Titel -->
-    <section data-background="norrsken.jpg?v=9" data-background-size="cover" data-background-opacity="0.45">
-      <h1 style="color:white; font-size:2.5em;">LIA-redovisning</h1>
+    <!-- Start / Titel (bild + vit text med skugga) -->
+    <section data-background="norrsken.jpg?v=10" data-background-size="cover" data-background-opacity="0.45" class="on-image">
+      <h1 style="color:white; font-size:2.4em;">LIA-redovisning</h1>
       <h3 style="color:white;">TR24HEJKUM • Resekonsult</h3>
       <p style="color:white;">Conri Turesson</p>
     </section>
@@ -51,15 +87,15 @@
       </ol>
     </section>
 
-    <!-- Företaget -->
-    <section data-background="adventure.jpg?v=9" data-background-size="cover" data-background-opacity="0.35">
+    <!-- Företaget (bildbakgrund, blå rubrik, mörk text) -->
+    <section data-background="adventure.jpg?v=10" data-background-size="cover" data-background-opacity="0.35">
       <h2>1. Företaget</h2>
-      <p><b>Unforgettable Nordic</b></p>
-      <p>Handledare: Silvia (grundare)</p>
-      <p>Arbetade tillsammans med min kurskamrat April</p>
-      <br>
-      <img src="logo.png?v=9" style="width:150px; margin-top:20px;">
-      <p style="font-style:italic; margin-top:10px;">"Let’s Start Your Next Nordic Adventure"</p>
+      <div class="card">
+        <p><b>Unforgettable Nordic</b></p>
+        <p>Handledare: Silvia (grundare)</p>
+        <p>Arbetade tillsammans med min kurskamrat April</p>
+        <p style="font-style:italic; margin-top:.4em;">"Let’s Start Your Next Nordic Adventure"</p>
+      </div>
     </section>
 
     <!-- Arbetsuppgifter -->
@@ -95,8 +131,10 @@
     <!-- Feedback -->
     <section>
       <h2>4. Feedback</h2>
-      <p>Fick positiv feedback på min struktur och initiativförmåga.</p>
-      <p>Uppskattat att jag skapade tydliga mallar och mappar.</p>
+      <ul>
+        <li>Positiv feedback på struktur och initiativförmåga</li>
+        <li>Värderat att jag byggde tydliga mallar och mappar</li>
+      </ul>
     </section>
 
     <!-- Lärdomar & nya kompetenser -->
@@ -104,41 +142,41 @@
       <h2>5. Lärdomar & nya kompetenser</h2>
       <ul>
         <li>Tog med mig erfarenheten från LIA1 där jag agerade projektledare</li>
-        <li>Insåg värdet av att ta ansvar för struktur redan från start</li>
-        <li>Byggde upp en gemensam <b>Drive-struktur</b>:<br>
-          Unforgettable LIA → Done Projects → Conri → Client</li>
+        <li>Ansvar för struktur redan från start</li>
+        <li>Byggde en gemensam <b>Drive-struktur</b>: Unforgettable LIA → Done Projects → Conri → Client</li>
         <li>Varje klientmapp innehåller Canva, Inclusions & Kalkyl</li>
-        <li>Lärde mig hur tydlig struktur sparar tid och underlättar samarbete</li>
+        <li>Tydlig struktur sparar tid och underlättar samarbete</li>
       </ul>
     </section>
 
     <!-- Sekretess & ansvar -->
     <section>
       <h2>6. Sekretess & ansvar</h2>
-      <p>Delar inga detaljer om interna system, data eller kundflöden.</p>
-      <p>Har följt riktlinjer och dokumenterat på en nivå som går att visa externt.</p>
+      <ul>
+        <li>Delar inga detaljer om interna system, data eller kundflöden</li>
+        <li>Följer riktlinjer och dokumenterar på visningsbar nivå</li>
+      </ul>
     </section>
 
     <!-- Jämförelse -->
     <section>
       <h2>7. Jämförelse LIA1 / LIA2</h2>
-      <p><b>LIA1:</b> Tog en projektledarroll, ansvar från start.</p>
-      <p><b>LIA2:</b> Fokuserat mer på praktiska verktyg, struktur och interna processer.</p>
+      <p><b>LIA1:</b> Tog en projektledarroll, ansvar från start</p>
+      <p><b>LIA2:</b> Fokuserat mer på praktiska verktyg, struktur och interna processer</p>
     </section>
 
     <!-- Rekommendation -->
     <section>
       <h2>8. Rekommendation</h2>
-      <p>Rekommenderar företaget för framtida praktikanter:</p>
       <ul>
-        <li>Får arbeta praktiskt med riktiga projekt</li>
+        <li>Praktiskt arbete med riktiga projekt</li>
         <li>Stort utrymme för initiativ</li>
         <li>Lärorikt och stöttande klimat</li>
       </ul>
     </section>
 
-    <!-- Avslut -->
-    <section data-background="sognefjord.jpg?v=9" data-background-size="cover" data-background-opacity="0.5">
+    <!-- Avslut (bild + vit text) -->
+    <section data-background="sognefjord.jpg?v=10" data-background-size="cover" data-background-opacity="0.5" class="on-image">
       <h2 style="color:white;">Tack för mig!</h2>
       <p style="color:white;">Frågor?</p>
     </section>
@@ -147,10 +185,10 @@
 </div>
 
 <!-- Logga i hörnet -->
-<img src="logo.png?v=9" style="position: fixed; bottom: 20px; right: 20px; width: 120px; opacity: 0.8;">
+<img src="logo.png?v=10" class="logo" alt="Logo">
 
 <!-- Reveal.js -->
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js?v=9"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js?v=10"></script>
 <script>
   Reveal.initialize({
     hash: true,
@@ -161,4 +199,4 @@
 </script>
 
 </body>
-        </html>
+</html>
