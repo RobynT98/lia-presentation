@@ -1,4 +1,4 @@
-<!-- Version 10 -->
+<!-- Version 11 -->
 <!doctype html>
 <html lang="sv">
 <head>
@@ -7,55 +7,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Reveal.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css?v=10">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/white.css?v=10" id="theme">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/print/pdf.css?v=10" media="print">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css?v=11">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/white.css?v=11" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/print/pdf.css?v=11" media="print">
 
   <!-- Font: Open Sans -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --brand-blue:#1e3a78;   /* rubriker */
-      --ink:#111;             /* brödtext */
-      --paper:#f7f8f3;        /* ljus pastel grön/beige bakgrund */
+      --brand-blue:#1e3a78;
+      --ink:#111;
+      --paper:#f7f8f3;
     }
-
-    /* Bas */
     .reveal{ background-color: var(--paper); }
     .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal p, .reveal li{
       font-family: 'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
       letter-spacing: .2px;
     }
-
-    /* Färger/typografi */
     .reveal h1, .reveal h2, .reveal h3{ color: var(--brand-blue); }
     .reveal p, .reveal li, .reveal table{ color: var(--ink); }
     .reveal section{ text-align: left; }
     .reveal ol, .reveal ul{ margin-left: 1.2em; }
-
-    /* Lätt skugga för läsbarhet mot bildbakgrunder */
-    .reveal .on-image{ text-shadow: 0 2px 6px rgba(0,0,0,.45); }
-
-    /* Logga nere till höger */
     .logo{
       position: fixed; right: 20px; bottom: 20px; width: 110px;
       opacity: .9; z-index: 40; pointer-events: none;
       filter: drop-shadow(0 2px 6px rgba(0,0,0,.35));
     }
-
-    /* Kort kort */
-    .card{
-      border:1px solid rgba(0,0,0,.08);
-      background: rgba(255,255,255,.75);
-      border-radius: 14px; padding: 14px 16px;
-      box-shadow: 0 6px 24px rgba(0,0,0,.08);
-    }
-
-    /* Mobil */
-    @media (max-width:560px){
-      .logo{ width: 84px; }
-    }
+    @media (max-width:560px){ .logo{ width: 84px; } }
   </style>
 </head>
 <body>
@@ -63,8 +42,8 @@
 <div class="reveal">
   <div class="slides">
 
-    <!-- Start / Titel (bild + vit text med skugga) -->
-    <section data-background="norrsken.jpg?v=10" data-background-size="cover" data-background-opacity="0.45" class="on-image">
+    <!-- Start -->
+    <section data-background="norrsken.jpg?v=11" data-background-size="cover" data-background-opacity="0.45">
       <h1 style="color:white; font-size:2.4em;">LIA-redovisning</h1>
       <h3 style="color:white;">TR24HEJKUM • Resekonsult</h3>
       <p style="color:white;">Conri Turesson</p>
@@ -87,15 +66,17 @@
       </ol>
     </section>
 
-    <!-- Företaget (bildbakgrund, blå rubrik, mörk text) -->
-    <section data-background="adventure.jpg?v=10" data-background-size="cover" data-background-opacity="0.35">
+    <!-- Företaget -->
+    <section>
       <h2>1. Företaget</h2>
-      <div class="card">
-        <p><b>Unforgettable Nordic</b></p>
-        <p>Handledare: Silvia (grundare)</p>
-        <p>Arbetade tillsammans med min kurskamrat April</p>
-        <p style="font-style:italic; margin-top:.4em;">"Let’s Start Your Next Nordic Adventure"</p>
-      </div>
+      <p><b>Unforgettable Nordic</b></p>
+      <p>Handledare: Silvia (grundare)</p>
+      <p>Arbetade tillsammans med min kurskamrat April</p>
+      <br>
+      <img src="adventure.jpg?v=11" style="width:65%; border-radius:12px; box-shadow:0 4px 18px rgba(0,0,0,0.25);">
+      <p style="font-style:italic; margin-top:12px; color:#1e3a78;">
+        "Let’s Start Your Next Nordic Adventure"
+      </p>
     </section>
 
     <!-- Arbetsuppgifter -->
@@ -175,8 +156,8 @@
       </ul>
     </section>
 
-    <!-- Avslut (bild + vit text) -->
-    <section data-background="sognefjord.jpg?v=10" data-background-size="cover" data-background-opacity="0.5" class="on-image">
+    <!-- Avslut -->
+    <section data-background="sognefjord.jpg?v=11" data-background-size="cover" data-background-opacity="0.5">
       <h2 style="color:white;">Tack för mig!</h2>
       <p style="color:white;">Frågor?</p>
     </section>
@@ -184,11 +165,9 @@
   </div>
 </div>
 
-<!-- Logga i hörnet -->
-<img src="logo.png?v=10" class="logo" alt="Logo">
+<img src="logo.png?v=11" class="logo" alt="Logo">
 
-<!-- Reveal.js -->
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js?v=10"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js?v=11"></script>
 <script>
   Reveal.initialize({
     hash: true,
@@ -199,4 +178,4 @@
 </script>
 
 </body>
-</html>
+  </html>
