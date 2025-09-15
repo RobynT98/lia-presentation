@@ -1,79 +1,95 @@
-<!-- Version 15 -->
+<!-- Version 16 -->
 <!doctype html>
 <html lang="sv">
 <head>
   <meta charset="utf-8">
   <title>LIA-presentation – Conri Turesson</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
   <!-- Reveal.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css?v=15">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/white.css?v=15" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css?v=16">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/white.css?v=16" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/print/pdf.css?v=16" media="print">
 
-  <!-- Google Fonts -->
+  <!-- Font: Open Sans -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    body, h1, h2, h3, p, li {
-      font-family: 'Open Sans', sans-serif !important;
+    :root{
+      --brand-blue:#1e3a78;
+      --ink:#121212;
+      --paper:#f7f8f3;
+      --border:#dfe4da;
+      --radius:16px;
     }
-    .reveal {
-      background-color: #f7f8f3;
+
+    /* Bas */
+    .reveal{ background:var(--paper); }
+    .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal p, .reveal li{
+      font-family:'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+      letter-spacing:.2px;
     }
-    .reveal h1, .reveal h2, .reveal h3 {
-      color: #1e3a78;
-      text-align: center;
-    }
-    .reveal p, .reveal li {
-      color: #111;
-      font-size: 1.1em;
-    }
-    .frame {
-      max-width: 900px;
+    .reveal section{ text-align:center; }
+
+    /* Inramning */
+    .frame{
+      max-width: 980px;
       margin: 0 auto;
-      padding: 40px;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-      text-align: center;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 14px 36px rgba(0,0,0,.08);
+      padding: 28px 34px;
     }
-    .frame ul {
-      list-style: none;
-      padding: 0;
+
+    /* Rubriker / text */
+    .reveal h1, .reveal h2, .reveal h3{ color:var(--brand-blue); margin:0 0 .35em 0; }
+    .title-underline{ width:120px; height:4px; margin:.35em auto 1em; background:var(--brand-blue); opacity:.2; border-radius:999px; }
+    .reveal p, .reveal li{ color:var(--ink); line-height:1.5; font-size:1.02em; }
+    .reveal ul, .reveal ol{ display:inline-block; text-align:left; margin:.2em auto 0; }
+    .img{ display:block; margin:.6em auto 0; width:70%; border-radius:var(--radius); border:1px solid var(--border); box-shadow:0 10px 28px rgba(0,0,0,.12); }
+    .on-image{ text-shadow:0 2px 8px rgba(0,0,0,.45); }
+
+    /* Logga */
+    .logo{ position:fixed; right:20px; bottom:20px; width:110px; opacity:.9; z-index:40; pointer-events:none; filter:drop-shadow(0 2px 6px rgba(0,0,0,.35)); }
+
+    /* --- Responsivitet --- */
+    /* Små mobiler (stående) */
+    @media (max-width:560px) and (orientation:portrait){
+      .frame{ max-width:92vw; padding:18px 16px; }
+      .reveal h1{ font-size:1.9em; }
+      .reveal h2{ font-size:1.4em; }
+      .reveal p, .reveal li{ font-size:1.02em; }
+      .img{ width:92%; }
+      .logo{ width:84px; }
     }
-    .frame li {
-      margin: 10px 0;
+    /* Mobiler (liggande) – lite bredare kort och kompaktare text */
+    @media (max-width:920px) and (orientation:landscape){
+      .frame{ max-width:86vw; padding:18px 22px; }
+      .reveal h2{ font-size:1.35em; }
+      .reveal p, .reveal li{ font-size:1.0em; }
+      .img{ width:80%; }
     }
-    .title-underline {
-      width: 60px;
-      height: 4px;
-      background: #1e3a78;
-      margin: 12px auto 24px auto;
-      border-radius: 2px;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    .logo-fixed {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 100px;
-      opacity: 0.8;
+    /* Större skärmar */
+    @media (min-width:1200px){
+      .frame{ max-width: 1040px; }
+      .reveal h2{ font-size:1.8em; }
+      .reveal p, .reveal li{ font-size:1.1em; }
     }
   </style>
 </head>
 <body>
+
 <div class="reveal">
   <div class="slides">
 
-    <!-- Titel -->
-    <section data-background="norrsken.jpg?v=15" data-background-size="cover" data-background-opacity="0.45">
-      <div class="frame" style="background:rgba(255,255,255,0.85);">
+    <!-- Start -->
+    <section data-background="norrsken.jpg?v=16" data-background-size="cover" data-background-opacity="0.45" class="on-image">
+      <div class="frame" style="background:rgba(255,255,255,.85);">
         <h1>LIA-redovisning</h1>
-        <h3>TR24HEJKUM • Resekonsult</h3>
-        <p>Conri Turesson</p>
+        <div class="title-underline" style="background:rgba(255,255,255,.55)"></div>
+        <p style="color:#1e3a78; margin:.2em 0;">TR24HEJKUM • Resekonsult</p>
+        <p style="color:#1e3a78;">Conri Turesson</p>
       </div>
     </section>
 
@@ -85,11 +101,12 @@
         <ol>
           <li>Företaget</li>
           <li>Arbetsuppgifter</li>
+          <li>Verktyg & arbetssätt</li>
           <li>Roligast / Svårast</li>
           <li>Feedback</li>
           <li>Lärdomar & nya kompetenser</li>
           <li>Sekretess & ansvar</li>
-          <li>Jämförelse LIA1 & LIA2</li>
+          <li>Jämförelse LIA1 / LIA2</li>
           <li>Rekommendation</li>
           <li>Avslut</li>
         </ol>
@@ -104,9 +121,8 @@
         <p><b>Unforgettable Nordic</b></p>
         <p>Handledare: Silvia (grundare)</p>
         <p>Arbetade tillsammans med min kurskamrat April</p>
-        <br>
-        <img src="adventure.jpg?v=15" style="width:65%; border-radius:12px; box-shadow:0 4px 18px rgba(0,0,0,0.25);">
-        <p style="font-style:italic; margin-top:12px; color:#1e3a78;">
+        <img src="adventure.jpg?v=16" alt="Unforgettable Nordic" class="img">
+        <p style="font-style:italic; margin-top:.6rem; color:#1e3a78;">
           "Let’s Start Your Next Nordic Adventure"
         </p>
       </div>
@@ -127,6 +143,20 @@
       </div>
     </section>
 
+    <!-- Verktyg & arbetssätt -->
+    <section>
+      <div class="frame">
+        <h2>Verktyg & arbetssätt</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li><b>Interna verktyg (sekretess):</b> första steget → ta fram itinerariet innan kalkyl & docs</li>
+          <li><b>Google Kalkylblad:</b> alla kostnader i USD, beräknar två totalsummor</li>
+          <li><b>Canva:</b> visuella resplaner med highlights, hotell & aktiviteter</li>
+          <li><b>Google Docs:</b> Inclusions → totalkostnad, vad som ingår & inte ingår</li>
+        </ul>
+      </div>
+    </section>
+
     <!-- Roligast / Svårast -->
     <section>
       <div class="frame">
@@ -143,7 +173,10 @@
       <div class="frame">
         <h2>4. Feedback</h2>
         <div class="title-underline"></div>
-        <p>Positiv feedback från handledare och kollegor om engagemang och initiativ</p>
+        <ul>
+          <li>Positiv feedback på struktur och initiativförmåga</li>
+          <li>Värderat att jag byggde tydliga mallar och mappar</li>
+        </ul>
       </div>
     </section>
 
@@ -153,34 +186,34 @@
         <h2>5. Lärdomar & nya kompetenser</h2>
         <div class="title-underline"></div>
         <ul>
-          <li>Tog med erfarenheten från LIA1 där jag agerade projektledare</li>
-          <li>Insåg värdet av struktur redan från start</li>
-          <li>Byggde en gemensam <b>Drive-struktur</b>:<br>
-            Unforgettable LIA → Done Projects → Conri → Client</li>
+          <li>Tog med mig erfarenheten från LIA1 där jag agerade projektledare</li>
+          <li>Ansvar för struktur redan från start</li>
+          <li>Byggde en gemensam <b>Drive-struktur</b>: Unforgettable LIA → Done Projects → Conri → Client</li>
           <li>Varje klientmapp innehåller Canva, Inclusions & Kalkyl</li>
-          <li>Lärde mig att tydlig struktur sparar tid & underlättar samarbete</li>
+          <li>Tydlig struktur sparar tid och underlättar samarbete</li>
         </ul>
       </div>
     </section>
 
-    <!-- Sekretess -->
+    <!-- Sekretess & ansvar -->
     <section>
       <div class="frame">
         <h2>6. Sekretess & ansvar</h2>
         <div class="title-underline"></div>
-        <p>Delar inga detaljer om interna system, data eller kundflöden.</p>
-        <p>Följer riktlinjer och skyddar information.</p>
-        <p>Effekt: trygg hantering och smidigt samarbete internt & med skolan.</p>
+        <ul>
+          <li>Delar inga detaljer om interna system, data eller kundflöden</li>
+          <li>Följer riktlinjer och dokumenterar på visningsbar nivå</li>
+        </ul>
       </div>
     </section>
 
-    <!-- Jämförelse LIA1 & LIA2 -->
+    <!-- Jämförelse -->
     <section>
       <div class="frame">
-        <h2>7. Jämförelse LIA1 & LIA2</h2>
+        <h2>7. Jämförelse LIA1 / LIA2</h2>
         <div class="title-underline"></div>
-        <p>LIA1: mer projektledarroll, tog ansvar från start.</p>
-        <p>LIA2: fokus på reseproduktion, kalkyler & visuellt material.</p>
+        <p><b>LIA1:</b> Tog en projektledarroll, ansvar från start</p>
+        <p><b>LIA2:</b> Fokuserat mer på praktiska verktyg, struktur och interna processer</p>
       </div>
     </section>
 
@@ -190,34 +223,41 @@
         <h2>8. Rekommendation</h2>
         <div class="title-underline"></div>
         <ul>
-          <li>Perfekt praktik för den som vill styra sitt eget schema</li>
-          <li>Flexibilitet – möjlighet att arbeta olika tider & helger vid behov</li>
-          <li>Passar bäst för initiativtagare som trivs utan fasta ramar</li>
-          <li>Mindre lämpligt för den som behöver strikt struktur</li>
+          <li>Perfekt för någon som vill styra sitt eget schema</li>
+          <li>Flexibelt upplägg – mindre morgon, mer kväll och helg vid behov</li>
+          <li>Passar bäst för den som tar egna initiativ och trivs utan 100% fasta uppgifter</li>
+          <li>Mindre kul för den som behöver fasta ramar, tydliga uppgifter och sällan tar egna initiativ</li>
         </ul>
       </div>
     </section>
 
-    <!-- Avslut -->
-    <section>
-      <div class="frame">
-        <h2>Tack för mig!</h2>
+    <!-- Avslut – fjorden som hel bakgrund -->
+    <section data-background="sognefjord.jpg?v=16" data-background-size="cover" data-background-opacity="0.5" class="on-image">
+      <div class="frame" style="background:rgba(255,255,255,.85);">
+        <h2 style="color:#1e3a78;">Tack för mig!</h2>
         <div class="title-underline"></div>
-        <img src="sognefjord.jpg?v=15" style="width:80%; border-radius:12px; box-shadow:0 4px 18px rgba(0,0,0,0.25);">
-        <p>Frågor?</p>
+        <p style="color:#1e3a78;">Frågor?</p>
       </div>
     </section>
 
   </div>
 </div>
 
-<img src="logo.png?v=15" class="logo-fixed">
+<img src="logo.png?v=16" class="logo" alt="Logo">
 
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js?v=15"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js?v=16"></script>
 <script>
   Reveal.initialize({
     hash: true,
-    slideNumber: true,
+    controls: true,
+    progress: true,
+    touch: true,
+    /* Gör att det skalar snyggt i både stående/liggande mobil och desktop */
+    width: 1280,
+    height: 720,
+    margin: 0.04,
+    minScale: 0.2,
+    maxScale: 2.0,
     pdfSeparateFragments: false,
     pdfMaxPagesPerSlide: 1
   });
