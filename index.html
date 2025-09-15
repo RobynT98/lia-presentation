@@ -2,107 +2,191 @@
 <html lang="sv">
 <head>
   <meta charset="utf-8">
-  <title>LIA Presentation</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>LIA-redovisning – Conri Turesson</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-  <!-- Reveal.js core -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/black.css" id="theme">
+  <!-- Reveal.js core + tema -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme">
 
-  <!-- PDF print support -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/print/pdf.css">
-  
+  <!-- PDF-stöd -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/print/pdf.css">
+
   <style>
-    /* Lite extra styling */
-    section {
-      text-align: center;
+    :root { --accent:#b21e2b; }
+    .reveal { font-family: ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica, Arial; }
+    .reveal h1, .reveal h2, .reveal h3 { text-transform:none; letter-spacing:.3px; }
+    .reveal a{ color:var(--accent); }
+    .card{
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:18px; padding:16px 18px;
+      background: rgba(0,0,0,.25);
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      text-align:left;
     }
-    h1, h2, h3 {
-      text-shadow: 1px 1px 2px #000;
+    .cover{ width:100%; height:420px; object-fit:cover; border-radius:16px; box-shadow:0 8px 24px rgba(0,0,0,.35); }
+    .footer{ position:absolute; bottom:16px; left:0; right:0; font-size:18px; opacity:.75; }
+    /* Fast logga på alla slides */
+    .brand{
+      position:fixed; right:18px; bottom:18px; width:120px; max-width:22vw;
+      opacity:.9; z-index:50; pointer-events:none; filter: drop-shadow(0 2px 6px rgba(0,0,0,.5));
+    }
+    /* Dölj logga på första sidan om bakgrund redan ÄR logga (kan ändras) */
+    .slide-logo-hide .brand{ display:none; }
+
+    /* Lite tightare text på mobil */
+    @media (max-width: 540px){
+      .reveal section { padding: 0 6px !important; }
+      .cover{ height: 240px; }
     }
   </style>
 </head>
-<body>
+<body class="slide-logo-show">
   <div class="reveal">
     <div class="slides">
 
-      <!-- Titel -->
-      <section data-background-image="cover.jpg">
-        <h1>LIA Presentation</h1>
-        <p>Ditt namn</p>
+      <!-- Titel (lägg gärna cover.jpg i root) -->
+      <section data-background-image="cover.jpg" data-background-opacity="0.25">
+        <h1>LIA-redovisning</h1>
+        <h3>TR24HEJKUM • Resekonsult</h3>
+        <p>Conri Turesson</p>
+        <aside class="notes">5 minuter: kort, konkret, 1 exempel per punkt.</aside>
       </section>
 
-      <!-- Företaget -->
-      <section data-background-image="office.jpg">
-        <h2>Om företaget</h2>
+      <!-- Agenda: skolans 10 frågor -->
+      <section>
+        <h2>Upplägg</h2>
+        <ol>
+          <li>Företag & roll</li>
+          <li>Arbetsuppgifter</li>
+          <li>Hur fungerar allt</li>
+          <li>Roligast</li>
+          <li>Feedback</li>
+          <li>Lärdomar</li>
+          <li>Nya kompetenser</li>
+          <li>Problem & lösning</li>
+          <li>LIA2 vs LIA1</li>
+          <li>Rekommendation</li>
+        </ol>
+      </section>
+
+      <!-- 1. Företag -->
+      <section data-background-image="office.jpg" data-background-opacity="0.18">
+        <h2>1. Företag</h2>
+        <div class="card">
+          <p><strong>Namn:</strong> Unforgettable Nordic</p>
+          <p><strong>Team/avdelning:</strong> <!-- fyll i --></p>
+          <p><strong>Period:</strong> <!-- fyll i --></p>
+          <p><strong>Varför här:</strong> <!-- 1 mening --></p>
+        </div>
+      </section>
+
+      <!-- 2. Arbetsuppgifter -->
+      <section>
+        <h2>2. Arbetsuppgifter</h2>
         <ul>
-          <li>Vad de gör</li>
-          <li>Vilka jag arbetade med</li>
-          <li>Deras mål och fokus</li>
+          <li><!-- uppgift 1 --></li>
+          <li><!-- uppgift 2 --></li>
+          <li><!-- uppgift 3 --></li>
+        </ul>
+        <p class="footer">Verktyg: Amadeus • Sabre • Travelport</p>
+      </section>
+
+      <!-- 3. Hur fungerar allt -->
+      <section>
+        <h2>3. Hur fungerar allt</h2>
+        <p><strong>Det som flöt:</strong> <!-- punkt --></p>
+        <p><strong>Mindre bra:</strong> <!-- punkt --></p>
+        <aside class="notes">Beskriv 1 konkret flöde: förfrågan → offert → bokning → uppföljning.</aside>
+      </section>
+
+      <!-- 4. Roligast -->
+      <section data-background-image="favorites.jpg" data-background-opacity="0.18">
+        <h2>4. Roligast</h2>
+        <img src="favorites.jpg" class="cover" alt="Favoritmoment">
+        <ul>
+          <li><!-- grej 1 --></li>
+          <li><!-- grej 2 --></li>
         </ul>
       </section>
 
-      <!-- Mina uppgifter -->
+      <!-- 5. Feedback -->
       <section>
-        <h2>Mina arbetsuppgifter</h2>
+        <h2>5. Feedback från handledare</h2>
+        <blockquote>“<!-- kort citat om styrka, t.ex. noggrann, trygg i kundkontakt -->”</blockquote>
+        <p><strong>Min uppföljning:</strong> <!-- vad du ändrade/förstärkte --></p>
+      </section>
+
+      <!-- 6–7. Lärdomar & kompetenser -->
+      <section>
+        <h2>6–7. Lärdomar & nya kompetenser</h2>
         <ul>
-          <li>Projektledning</li>
-          <li>Planering</li>
-          <li>Teamarbete</li>
+          <li><!-- lärdom 1 --></li>
+          <li><!-- lärdom 2 --></li>
+          <li><!-- kompetens 1 --></li>
         </ul>
       </section>
 
-      <!-- Lärdomar -->
+      <!-- 8. Problem & lösning -->
       <section>
-        <h2>Vad jag lärde mig</h2>
-        <ul>
-          <li>Kunskap 1</li>
-          <li>Kunskap 2</li>
-          <li>Kunskap 3</li>
-        </ul>
+        <h2>8. Problem jag löste</h2>
+        <div class="card">
+          <p><strong>Situation:</strong> <!-- kort --></p>
+          <p><strong>Åtgärd:</strong> <!-- vad gjorde du --></p>
+          <p><strong>Resultat:</strong> <!-- utfallet --></p>
+        </div>
       </section>
 
-      <!-- Favoritdel -->
-      <section data-background-image="favorites.jpg">
-        <h2>Det bästa under LIA</h2>
-        <p>Min favoritdel var...</p>
-      </section>
-
-      <!-- Utmaningar -->
+      <!-- 9. Jämförelse -->
       <section>
-        <h2>Utmaningar</h2>
-        <p>Det svåraste var...</p>
+        <h2>9. LIA2 jämfört med LIA1</h2>
+        <table>
+          <tr><th>Område</th><th>LIA1</th><th>LIA2</th></tr>
+          <tr><td>Ansvar</td><td><!-- ... --></td><td><!-- ... --></td></tr>
+          <tr><td>Tempo</td><td><!-- ... --></td><td><!-- ... --></td></tr>
+          <tr><td>Kundkontakt</td><td><!-- ... --></td><td><!-- ... --></td></tr>
+        </table>
       </section>
 
-      <!-- Feedback -->
-      <section>
-        <h2>Feedback till företaget</h2>
-        <p>Mina tankar och tips...</p>
-      </section>
-
-      <!-- Framtid -->
-      <section data-background-image="team.jpg">
-        <h2>Framtid</h2>
-        <p>Så här tänker jag använda mina erfarenheter framåt</p>
+      <!-- 10. Rekommendation -->
+      <section data-background-image="team.jpg" data-background-opacity="0.20">
+        <h2>10. Rekommenderar jag platsen?</h2>
+        <h3><!-- Ja/Nej + 1 mening --></h3>
+        <p>Skulle förbättra: <!-- en grej --></p>
       </section>
 
       <!-- Avslut -->
       <section>
-        <h1>Tack!</h1>
+        <h2>Tack!</h2>
         <p>Frågor?</p>
+        <p class="footer">Kontakt: <!-- mail/LinkedIn --></p>
       </section>
 
     </div>
   </div>
 
-  <!-- Reveal.js core + plugins -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js"></script>
+  <!-- Logga visas på ALLA slides (lägg logo.png i root) -->
+  <img src="logo.png" alt="Företagslogga" class="brand" onerror="this.style.display='none'">
+
+  <!-- Reveal init -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
   <script>
     Reveal.initialize({
       hash: true,
+      slideNumber: true,
+      transition: "slide",
+      width: 1280,
+      height: 720,
+      margin: 0.06,
+      controlsTutorial: false,
+
+      /* PDF */
       pdfSeparateFragments: false,
       pdfMaxPagesPerSlide: 1
     });
+
+    // Om du vill dölja loggan på första sliden, lägg class "slide-logo-hide" på <body>
+    // document.body.classList.add('slide-logo-hide');
   </script>
 </body>
 </html>
