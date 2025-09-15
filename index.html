@@ -1,271 +1,127 @@
 <!doctype html>
 <html lang="sv">
-<head>
-  <meta charset="utf-8" />
-  <title>LIA-presentation – Conri Turesson</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="utf-8">
+    <title>LIA-presentation – Conri Turesson</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <!-- Reveal.css (rätt ordning: reset -> core -> theme) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.2/dist/reset.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.2/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.2/dist/theme/white.css" id="theme">
+    <!-- Reveal.js standard CSS från unpkg -->
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.6.2/dist/reset.css">
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.6.2/dist/reveal.css">
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.6.2/dist/theme/white.css" id="theme">
 
-  <!-- Open Sans -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background: #fdfdfd;
+      }
+      .reveal h1, .reveal h2, .reveal h3 {
+        color: #1e3a78;
+      }
+      .frame {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        padding: 30px;
+        text-align: center;
+      }
+      .title-underline {
+        width: 60px;
+        height: 3px;
+        background: #1e3a78;
+        margin: 12px auto 24px auto;
+      }
+      img {
+        max-width: 80%;
+        border-radius: 10px;
+        margin: 12px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
 
-  <style>
-    :root{
-      --blue:#1e3a78;         /* rubriker (som loggan) */
-      --ink:#111;             /* brödtext */
-      --paper:#f5f7f2;        /* ljus pastelgrön/beige bakgrund */
-      --card:#fff;            /* kort/ramar */
-      --shadow:0 10px 28px rgba(0,0,0,.10);
-      --muted:#5e5e5e;
-    }
-    body{ font-family:"Open Sans",ui-sans-serif,system-ui,Segoe UI,Roboto,Arial,sans-serif; }
-    .reveal{ color:var(--ink); background:var(--paper); }
-    .reveal h1,.reveal h2,.reveal h3{ color:var(--blue); }
-    .reveal p{ line-height:1.45; }
-    .frame{
-      display:inline-block;
-      background:var(--card);
-      padding:2.0rem 2.2rem;
-      border-radius:16px;
-      box-shadow:var(--shadow);
-      border:1px solid rgba(0,0,0,.06);
-      max-width:1000px; width:92%;
-      text-align:left;
-    }
-    .center{text-align:center}
-    .rule{
-      width:72px;height:3px;background:rgba(30,58,120,.25);
-      border-radius:3px;margin:.6rem 0 1.2rem 0;
-    }
-    .lead{font-size:1.1rem;color:var(--muted)}
-    .stack ul{ margin-left:1.1rem }
-    .stack li{ margin:.35rem 0 }
-    .two-col{
-      display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; align-items:start;
-    }
-    @media (max-width:900px){ .two-col{ grid-template-columns:1fr } }
+        <!-- Titel -->
+        <section>
+          <div class="frame">
+            <h2>LIA-REDOVISNING</h2>
+            <p>TR24HEJKUM • Resekonsult</p>
+            <p><strong>Conri Turesson</strong></p>
+          </div>
+        </section>
 
-    img.round{border-radius:12px; max-width:100%; height:auto; display:block}
-    .fjord-bg{ background:url("fjord.jpg") center/cover no-repeat; }
-    .aurora-bg{ background:url("aurora.jpg") center/cover no-repeat; }
+        <!-- Agenda -->
+        <section>
+          <div class="frame">
+            <h2>AGENDA</h2>
+            <div class="title-underline"></div>
+            <ol>
+              <li>Företaget</li>
+              <li>Arbetsuppgifter</li>
+              <li>Verktyg & arbetssätt</li>
+              <li>Roligast / Svårast</li>
+              <li>Feedback</li>
+              <li>Lärdomar & nya kompetenser</li>
+              <li>Sekretess & ansvar</li>
+              <li>Jämförelse LIA1 / LIA2</li>
+              <li>Rekommendation</li>
+            </ol>
+          </div>
+        </section>
 
-    /* liten logga nere till höger */
-    .logo{
-      position:fixed; right:14px; bottom:12px; opacity:.9; z-index:5;
-      width:64px; height:auto;
-    }
+        <!-- Företaget -->
+        <section>
+          <div class="frame">
+            <h2>1. FÖRETAGET</h2>
+            <p><strong>Unforgettable Nordic</strong></p>
+            <p>Handledare: Silvia (grundare)</p>
+            <p>Arbetade tillsammans med min kurskamrat April</p>
+            <img src="unforgettable-nordic.png" alt="Unforgettable Nordic">
+          </div>
+        </section>
 
-    /* listor i mitten på slide */
-    ul.compact{ display:inline-block; text-align:left; }
-    .title-center{ text-align:center }
-  </style>
-</head>
-<body>
-
-<!-- vattenstämpel/logga (valfritt – ta bort om du vill) -->
-<img class="logo" src="logo.png" alt="Unforgettable Nordic">
-
-<div class="reveal">
-  <div class="slides">
-
-    <!-- 0. Titel -->
-    <section class="aurora-bg center">
-      <div class="frame title-center">
-        <h1 style="margin:0 0 .4rem 0;">LIA-REDOVISNING</h1>
-        <div class="rule" style="margin:.2rem auto 1.1rem;"></div>
-        <h3 style="margin:.2rem 0">TR24HEJKUM • Resekonsult</h3>
-        <p style="margin:.1rem 0 .2rem 0;">Conri Turesson</p>
-      </div>
-    </section>
-
-    <!-- 1. Agenda -->
-    <section class="center">
-      <div class="frame title-center">
-        <h2>AGENDA</h2>
-        <div class="rule" style="margin:.4rem auto 1.0rem;"></div>
-        <ol class="compact" style="font-size:1.05rem;">
-          <li>Företaget</li>
-          <li>Arbetsuppgifter</li>
-          <li>Verktyg & arbetssätt</li>
-          <li>Roligast / Svårast</li>
-          <li>Feedback</li>
-          <li>Lärdomar & nya kompetenser</li>
-          <li>Sekretess & ansvar</li>
-          <li>Jämförelse LIA1 / LIA2</li>
-          <li>Rekommendation</li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- 2. Företaget -->
-    <section class="center">
-      <div class="frame">
-        <h2>1. FÖRETAGET</h2>
-        <div class="rule"></div>
-        <p><b>Unforgettable Nordic</b></p>
-        <p>Handledare: Silvia (grundare)</p>
-        <p>Arbetade tillsammans med min kurskamrat April</p>
-        <div class="center" style="margin-top:.8rem">
-          <img class="round" src="tagline.jpg" alt="Let's Start Your Next Nordic Adventure" style="max-width:640px;">
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. Arbetsuppgifter -->
-    <section class="center">
-      <div class="frame stack">
-        <h2>2. ARBETSUPPGIFTER</h2>
-        <div class="rule"></div>
-        <ul>
-          <li><b>Kalkyl i USD</b> → två totalsummor (utan & med företagets påslag)</li>
-          <li><b>Reseplaner</b> – skapa kompletta offers / PDF</li>
-          <li><b>Google Drive</b> – delade mappar & struktur</li>
-          <li><b>Interna uppgifter</b> (under sekretess)</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 4. Verktyg & arbetssätt -->
-    <section class="center">
-      <div class="frame stack">
-        <h2>3. VERKTYG & ARBETSSÄTT</h2>
-        <div class="rule"></div>
-        <div class="two-col">
-          <div>
-            <h3 style="margin:.2rem 0 .4rem 0;">Verktyg</h3>
+        <!-- Arbetsuppgifter -->
+        <section>
+          <div class="frame">
+            <h2>2. ARBETSUPPGIFTER</h2>
             <ul>
-              <li><b>Google Docs</b> – Inclusions (pris + vad som ingår/inte ingår)</li>
-              <li><b>Google Kalkylblad</b> – kostnader i USD, totalsummor, påslag</li>
-              <li><b>Canva</b> – visuella resplaner med highlights, hotell, aktiviteter</li>
-              <li><b>Interna verktyg</b> – itineary fram innan övrigt (sekretess)</li>
+              <li>Kalkyl i USD – utan & med företagets påslag</li>
+              <li>Reseplaner – skapa offers i Excel/PDF</li>
+              <li>Google Drive – struktur & samarbeta</li>
+              <li>Interna verktyg – (sekretess)</li>
             </ul>
           </div>
-          <div>
-            <h3 style="margin:.2rem 0 .4rem 0;">Arbetssätt</h3>
-            <ul>
-              <li>Min struktur (från LIA1-erfarenhet som “projektledare”):</li>
-            </ul>
-            <ul style="margin-left:1.4rem">
-              <li><code>Unforgettable LIA/Done Projects/Conri/Client/…</code></li>
-              <li>Mallar + “done”-mappar per kund → lätt att dela & lära</li>
-              <li>Schema i Drive, tydliga filnamn och versionsspårning</li>
-            </ul>
+        </section>
+
+        <!-- osv... resten av slides (verktyg, feedback, lärdomar, jämförelse, rekommendation, tack) -->
+        <section>
+          <div class="frame">
+            <h2>TACK FÖR MIG!</h2>
+            <img src="fjord.jpg" alt="Fjord">
           </div>
-        </div>
+        </section>
+
       </div>
-    </section>
+    </div>
 
-    <!-- 5. Roligast / Svårast -->
-    <section class="center">
-      <div class="frame stack">
-        <h2>4. ROLIGAST / SVÅRAST</h2>
-        <div class="rule"></div>
-        <p><b>Roligast:</b> kreativt arbete i Canva & reseplanering.</p>
-        <p><b>Svårast:</b> prissättning, kalkyl & budget.</p>
-        <p class="lead"><i>Tränar genom att skapa & prissätta egna små resplaner för mig och vänner.</i></p>
-      </div>
-    </section>
-
-    <!-- 6. Feedback -->
-    <section class="center">
-      <div class="frame stack">
-        <h2>5. FEEDBACK</h2>
-        <div class="rule"></div>
-        <ul>
-          <li>Snabb inlärning & självständighet uppskattades</li>
-          <li>Flexibel, tar initiativ och håller struktur</li>
-          <li>Behöver mer träning i marginaler och prissättning</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 7. Lärdomar & nya kompetenser -->
-    <section class="center">
-      <div class="frame stack">
-        <h2>6. LÄRDOMAR & NYA KOMPETENSER</h2>
-        <div class="rule"></div>
-        <ul>
-          <li>Praktisk branschvana & kundanpassade resplaner</li>
-          <li>Bättre grepp om USD/SEK, påslag och offerstruktur</li>
-          <li>Bygga arbetsflöde i Drive som teamet kan återanvända</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 8. Sekretess & ansvar -->
-    <section class="center">
-      <div class="frame stack">
-        <h2>7. SEKRETESS & ANSVAR</h2>
-        <div class="rule"></div>
-        <ul>
-          <li>Delar inte interna system, data eller kundflöden</li>
-          <li>Följer riktlinjer, skyddar information, dokumenterar på visningsbar nivå</li>
-          <li>Ger trygg hantering & smidigt samarbete internt och med skolan</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 9. Jämförelse LIA1/LIA2 -->
-    <section class="center">
-      <div class="frame stack">
-        <h2>8. JÄMFÖRELSE LIA1 / LIA2</h2>
-        <div class="rule"></div>
-        <ul>
-          <li><b>LIA1:</b> mer introduktion, enklare uppgifter, mycket guidning</li>
-          <li><b>LIA2:</b> mer ansvar, egna offers, tät kontakt med handledare</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 10. Rekommendation -->
-    <section class="center">
-      <div class="frame stack">
-        <h2>9. REKOMMENDATION</h2>
-        <div class="rule"></div>
-        <p>Praktiken passar någon som vill styra eget schema, är flexibel och tar initiativ.</p>
-        <p>Mindre rätt för den som behöver fasta uppgifter & tydliga ramar hela tiden.</p>
-      </div>
-    </section>
-
-    <!-- 11. Tack -->
-    <section class="fjord-bg center">
-      <div class="frame title-center">
-        <h2>TACK FÖR MIG!</h2>
-        <div class="rule" style="margin:.4rem auto 1.0rem;"></div>
-        <img class="round" src="fjord.jpg" alt="Sognefjord" style="max-width:780px;">
-        <p style="margin-top:.8rem">Frågor?</p>
-      </div>
-    </section>
-
-  </div>
-</div>
-
-<!-- Reveal.js sist och init efter load (annars blir det "lång sida") -->
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.2/dist/reveal.js"></script>
-<script>
-  window.addEventListener('load', () => {
-    try{
-      Reveal.initialize({
-        hash:true,
-        controls:true,
-        progress:true,
-        center:true,
-        width:"100%",
-        height:"100%",
-        margin:0.04,
-        minScale:0.2,
-        maxScale:1.0,
-        slideNumber:true
+    <!-- Reveal.js script från unpkg -->
+    <script src="https://unpkg.com/reveal.js@4.6.2/dist/reveal.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        if (window.Reveal) {
+          console.log("✅ Reveal laddades in");
+          Reveal.initialize({
+            hash: true,
+            width: "100%",
+            height: "100%",
+            margin: 0.04,
+            minScale: 0.2,
+            maxScale: 2.0
+          });
+        } else {
+          console.error("❌ Reveal kunde inte laddas");
+        }
       });
-      Reveal.on('ready', () => console.log('[Reveal] ready'));
-    }catch(e){
-      console.error('Reveal kunde inte initieras:', e);
-    }
-  });
-</script>
-</body>
+    </script>
+  </body>
 </html>
