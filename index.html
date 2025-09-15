@@ -1,4 +1,4 @@
-<!-- Version 16 -->
+<!-- Version 17 -->
 <!doctype html>
 <html lang="sv">
 <head>
@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
   <!-- Reveal.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css?v=16">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/white.css?v=16" id="theme">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/print/pdf.css?v=16" media="print">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css?v=17">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/white.css?v=17" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/print/pdf.css?v=17" media="print">
 
   <!-- Font: Open Sans -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -23,7 +23,6 @@
       --radius:16px;
     }
 
-    /* Bas */
     .reveal{ background:var(--paper); }
     .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal p, .reveal li{
       font-family:'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
@@ -31,7 +30,6 @@
     }
     .reveal section{ text-align:center; }
 
-    /* Inramning */
     .frame{
       max-width: 980px;
       margin: 0 auto;
@@ -42,19 +40,26 @@
       padding: 28px 34px;
     }
 
-    /* Rubriker / text */
     .reveal h1, .reveal h2, .reveal h3{ color:var(--brand-blue); margin:0 0 .35em 0; }
     .title-underline{ width:120px; height:4px; margin:.35em auto 1em; background:var(--brand-blue); opacity:.2; border-radius:999px; }
     .reveal p, .reveal li{ color:var(--ink); line-height:1.5; font-size:1.02em; }
     .reveal ul, .reveal ol{ display:inline-block; text-align:left; margin:.2em auto 0; }
-    .img{ display:block; margin:.6em auto 0; width:70%; border-radius:var(--radius); border:1px solid var(--border); box-shadow:0 10px 28px rgba(0,0,0,.12); }
+
+    /* Inramad, centrerad bild i kortet */
+    .img{
+      display:block;
+      margin:1rem auto 0;
+      width:70%;
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      box-shadow:0 10px 28px rgba(0,0,0,.12);
+    }
+
     .on-image{ text-shadow:0 2px 8px rgba(0,0,0,.45); }
 
-    /* Logga */
     .logo{ position:fixed; right:20px; bottom:20px; width:110px; opacity:.9; z-index:40; pointer-events:none; filter:drop-shadow(0 2px 6px rgba(0,0,0,.35)); }
 
-    /* --- Responsivitet --- */
-    /* Små mobiler (stående) */
+    /* Responsivitet */
     @media (max-width:560px) and (orientation:portrait){
       .frame{ max-width:92vw; padding:18px 16px; }
       .reveal h1{ font-size:1.9em; }
@@ -63,16 +68,14 @@
       .img{ width:92%; }
       .logo{ width:84px; }
     }
-    /* Mobiler (liggande) – lite bredare kort och kompaktare text */
     @media (max-width:920px) and (orientation:landscape){
       .frame{ max-width:86vw; padding:18px 22px; }
       .reveal h2{ font-size:1.35em; }
       .reveal p, .reveal li{ font-size:1.0em; }
       .img{ width:80%; }
     }
-    /* Större skärmar */
     @media (min-width:1200px){
-      .frame{ max-width: 1040px; }
+      .frame{ max-width:1040px; }
       .reveal h2{ font-size:1.8em; }
       .reveal p, .reveal li{ font-size:1.1em; }
     }
@@ -84,7 +87,7 @@
   <div class="slides">
 
     <!-- Start -->
-    <section data-background="norrsken.jpg?v=16" data-background-size="cover" data-background-opacity="0.45" class="on-image">
+    <section data-background="norrsken.jpg?v=17" data-background-size="cover" data-background-opacity="0.45" class="on-image">
       <div class="frame" style="background:rgba(255,255,255,.85);">
         <h1>LIA-redovisning</h1>
         <div class="title-underline" style="background:rgba(255,255,255,.55)"></div>
@@ -113,7 +116,7 @@
       </div>
     </section>
 
-    <!-- Företaget -->
+    <!-- Företaget (citat borttaget, bild centrerad) -->
     <section>
       <div class="frame">
         <h2>1. Företaget</h2>
@@ -121,10 +124,7 @@
         <p><b>Unforgettable Nordic</b></p>
         <p>Handledare: Silvia (grundare)</p>
         <p>Arbetade tillsammans med min kurskamrat April</p>
-        <img src="adventure.jpg?v=16" alt="Unforgettable Nordic" class="img">
-        <p style="font-style:italic; margin-top:.6rem; color:#1e3a78;">
-          "Let’s Start Your Next Nordic Adventure"
-        </p>
+        <img src="adventure.jpg?v=17" alt="Unforgettable Nordic" class="img">
       </div>
     </section>
 
@@ -232,7 +232,7 @@
     </section>
 
     <!-- Avslut – fjorden som hel bakgrund -->
-    <section data-background="sognefjord.jpg?v=16" data-background-size="cover" data-background-opacity="0.5" class="on-image">
+    <section data-background="sognefjord.jpg?v=17" data-background-size="cover" data-background-opacity="0.5" class="on-image">
       <div class="frame" style="background:rgba(255,255,255,.85);">
         <h2 style="color:#1e3a78;">Tack för mig!</h2>
         <div class="title-underline"></div>
@@ -243,16 +243,15 @@
   </div>
 </div>
 
-<img src="logo.png?v=16" class="logo" alt="Logo">
+<img src="logo.png?v=17" class="logo" alt="Logo">
 
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js?v=16"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js?v=17"></script>
 <script>
   Reveal.initialize({
     hash: true,
     controls: true,
     progress: true,
     touch: true,
-    /* Gör att det skalar snyggt i både stående/liggande mobil och desktop */
     width: 1280,
     height: 720,
     margin: 0.04,
@@ -263,4 +262,4 @@
   });
 </script>
 </body>
-</html>
+                               </html>
