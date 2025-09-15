@@ -1,4 +1,4 @@
-<!-- Version 11 -->
+<!-- Version 15 -->
 <!doctype html>
 <html lang="sv">
 <head>
@@ -7,167 +7,213 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Reveal.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css?v=11">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/white.css?v=11" id="theme">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/print/pdf.css?v=11" media="print">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css?v=15">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/white.css?v=15" id="theme">
 
-  <!-- Font: Open Sans -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --brand-blue:#1e3a78;
-      --ink:#111;
-      --paper:#f7f8f3;
+    body, h1, h2, h3, p, li {
+      font-family: 'Open Sans', sans-serif !important;
     }
-    .reveal{ background-color: var(--paper); }
-    .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal p, .reveal li{
-      font-family: 'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
-      letter-spacing: .2px;
+    .reveal {
+      background-color: #f7f8f3;
     }
-    .reveal h1, .reveal h2, .reveal h3{ color: var(--brand-blue); }
-    .reveal p, .reveal li, .reveal table{ color: var(--ink); }
-    .reveal section{ text-align: left; }
-    .reveal ol, .reveal ul{ margin-left: 1.2em; }
-    .logo{
-      position: fixed; right: 20px; bottom: 20px; width: 110px;
-      opacity: .9; z-index: 40; pointer-events: none;
-      filter: drop-shadow(0 2px 6px rgba(0,0,0,.35));
+    .reveal h1, .reveal h2, .reveal h3 {
+      color: #1e3a78;
+      text-align: center;
     }
-    @media (max-width:560px){ .logo{ width: 84px; } }
+    .reveal p, .reveal li {
+      color: #111;
+      font-size: 1.1em;
+    }
+    .frame {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+    .frame ul {
+      list-style: none;
+      padding: 0;
+    }
+    .frame li {
+      margin: 10px 0;
+    }
+    .title-underline {
+      width: 60px;
+      height: 4px;
+      background: #1e3a78;
+      margin: 12px auto 24px auto;
+      border-radius: 2px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .logo-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 100px;
+      opacity: 0.8;
+    }
   </style>
 </head>
 <body>
-
 <div class="reveal">
   <div class="slides">
 
-    <!-- Start -->
-    <section data-background="norrsken.jpg?v=11" data-background-size="cover" data-background-opacity="0.45">
-      <h1 style="color:white; font-size:2.4em;">LIA-redovisning</h1>
-      <h3 style="color:white;">TR24HEJKUM • Resekonsult</h3>
-      <p style="color:white;">Conri Turesson</p>
+    <!-- Titel -->
+    <section data-background="norrsken.jpg?v=15" data-background-size="cover" data-background-opacity="0.45">
+      <div class="frame" style="background:rgba(255,255,255,0.85);">
+        <h1>LIA-redovisning</h1>
+        <h3>TR24HEJKUM • Resekonsult</h3>
+        <p>Conri Turesson</p>
+      </div>
     </section>
 
     <!-- Agenda -->
     <section>
-      <h2>Agenda</h2>
-      <ol>
-        <li>Företaget</li>
-        <li>Arbetsuppgifter</li>
-        <li>Verktyg & arbetssätt</li>
-        <li>Roligast / Svårast</li>
-        <li>Feedback</li>
-        <li>Lärdomar & nya kompetenser</li>
-        <li>Sekretess & ansvar</li>
-        <li>Jämförelse LIA1 / LIA2</li>
-        <li>Rekommendation</li>
-        <li>Avslut</li>
-      </ol>
+      <div class="frame">
+        <h2>Agenda</h2>
+        <div class="title-underline"></div>
+        <ol>
+          <li>Företaget</li>
+          <li>Arbetsuppgifter</li>
+          <li>Roligast / Svårast</li>
+          <li>Feedback</li>
+          <li>Lärdomar & nya kompetenser</li>
+          <li>Sekretess & ansvar</li>
+          <li>Jämförelse LIA1 & LIA2</li>
+          <li>Rekommendation</li>
+          <li>Avslut</li>
+        </ol>
+      </div>
     </section>
 
     <!-- Företaget -->
     <section>
-      <h2>1. Företaget</h2>
-      <p><b>Unforgettable Nordic</b></p>
-      <p>Handledare: Silvia (grundare)</p>
-      <p>Arbetade tillsammans med min kurskamrat April</p>
-      <br>
-      <img src="adventure.jpg?v=11" style="width:65%; border-radius:12px; box-shadow:0 4px 18px rgba(0,0,0,0.25);">
-      <p style="font-style:italic; margin-top:12px; color:#1e3a78;">
-        "Let’s Start Your Next Nordic Adventure"
-      </p>
+      <div class="frame">
+        <h2>1. Företaget</h2>
+        <div class="title-underline"></div>
+        <p><b>Unforgettable Nordic</b></p>
+        <p>Handledare: Silvia (grundare)</p>
+        <p>Arbetade tillsammans med min kurskamrat April</p>
+        <br>
+        <img src="adventure.jpg?v=15" style="width:65%; border-radius:12px; box-shadow:0 4px 18px rgba(0,0,0,0.25);">
+        <p style="font-style:italic; margin-top:12px; color:#1e3a78;">
+          "Let’s Start Your Next Nordic Adventure"
+        </p>
+      </div>
     </section>
 
     <!-- Arbetsuppgifter -->
     <section>
-      <h2>2. Arbetsuppgifter</h2>
-      <ul>
-        <li>Kalkyl i USD → två totalsummor (utan & med påslag)</li>
-        <li>Visuella resplaner i Canva: highlights, hotell, aktiviteter</li>
-        <li>Inclusions i Google Docs: paketpris, vad som ingår & ej ingår</li>
-        <li>Uppföljning i Google Kalkylblad</li>
-        <li>Interna uppgifter (sekretess)</li>
-      </ul>
-    </section>
-
-    <!-- Verktyg & arbetssätt -->
-    <section>
-      <h2>Verktyg & arbetssätt</h2>
-      <ul>
-        <li><b>Interna verktyg (sekretess):</b> första steget → ta fram itinerariet innan kalkyl & docs</li>
-        <li><b>Google Kalkylblad:</b> alla kostnader i USD, beräknar två totalsummor</li>
-        <li><b>Canva:</b> visuella resplaner med highlights, hotell & aktiviteter</li>
-        <li><b>Google Docs:</b> Inclusions → totalkostnad, vad som ingår & inte ingår</li>
-      </ul>
+      <div class="frame">
+        <h2>2. Arbetsuppgifter</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li>Kalkyl i USD → två totalsummor (utan & med påslag)</li>
+          <li>Visuella resplaner i Canva: highlights, hotell, aktiviteter</li>
+          <li>Inclusions i Google Docs: paketpris, vad som ingår & ej ingår</li>
+          <li>Uppföljning i Google Kalkylblad</li>
+          <li>Interna uppgifter (sekretess)</li>
+        </ul>
+      </div>
     </section>
 
     <!-- Roligast / Svårast -->
     <section>
-      <h2>3. Roligast / Svårast</h2>
-      <p><b>Roligast:</b> Kreativa moment i Canva & att planera resor</p>
-      <p><b>Svårast:</b> Prissättning, kalkyler & budgetarbete</p>
+      <div class="frame">
+        <h2>3. Roligast / Svårast</h2>
+        <div class="title-underline"></div>
+        <p><b>Roligast:</b> Kreativa moment i Canva & att planera resor</p>
+        <p><b>Svårast:</b> Prissättning, kalkyler & budgetarbete</p>
+        <p><i>Jag tränar genom att skapa och prissätta egna små resplaner för mig och vänner.</i></p>
+      </div>
     </section>
 
     <!-- Feedback -->
     <section>
-      <h2>4. Feedback</h2>
-      <ul>
-        <li>Positiv feedback på struktur och initiativförmåga</li>
-        <li>Värderat att jag byggde tydliga mallar och mappar</li>
-      </ul>
+      <div class="frame">
+        <h2>4. Feedback</h2>
+        <div class="title-underline"></div>
+        <p>Positiv feedback från handledare och kollegor om engagemang och initiativ</p>
+      </div>
     </section>
 
     <!-- Lärdomar & nya kompetenser -->
     <section>
-      <h2>5. Lärdomar & nya kompetenser</h2>
-      <ul>
-        <li>Tog med mig erfarenheten från LIA1 där jag agerade projektledare</li>
-        <li>Ansvar för struktur redan från start</li>
-        <li>Byggde en gemensam <b>Drive-struktur</b>: Unforgettable LIA → Done Projects → Conri → Client</li>
-        <li>Varje klientmapp innehåller Canva, Inclusions & Kalkyl</li>
-        <li>Tydlig struktur sparar tid och underlättar samarbete</li>
-      </ul>
+      <div class="frame">
+        <h2>5. Lärdomar & nya kompetenser</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li>Tog med erfarenheten från LIA1 där jag agerade projektledare</li>
+          <li>Insåg värdet av struktur redan från start</li>
+          <li>Byggde en gemensam <b>Drive-struktur</b>:<br>
+            Unforgettable LIA → Done Projects → Conri → Client</li>
+          <li>Varje klientmapp innehåller Canva, Inclusions & Kalkyl</li>
+          <li>Lärde mig att tydlig struktur sparar tid & underlättar samarbete</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Sekretess & ansvar -->
+    <!-- Sekretess -->
     <section>
-      <h2>6. Sekretess & ansvar</h2>
-      <ul>
-        <li>Delar inga detaljer om interna system, data eller kundflöden</li>
-        <li>Följer riktlinjer och dokumenterar på visningsbar nivå</li>
-      </ul>
+      <div class="frame">
+        <h2>6. Sekretess & ansvar</h2>
+        <div class="title-underline"></div>
+        <p>Delar inga detaljer om interna system, data eller kundflöden.</p>
+        <p>Följer riktlinjer och skyddar information.</p>
+        <p>Effekt: trygg hantering och smidigt samarbete internt & med skolan.</p>
+      </div>
     </section>
 
-    <!-- Jämförelse -->
+    <!-- Jämförelse LIA1 & LIA2 -->
     <section>
-      <h2>7. Jämförelse LIA1 / LIA2</h2>
-      <p><b>LIA1:</b> Tog en projektledarroll, ansvar från start</p>
-      <p><b>LIA2:</b> Fokuserat mer på praktiska verktyg, struktur och interna processer</p>
+      <div class="frame">
+        <h2>7. Jämförelse LIA1 & LIA2</h2>
+        <div class="title-underline"></div>
+        <p>LIA1: mer projektledarroll, tog ansvar från start.</p>
+        <p>LIA2: fokus på reseproduktion, kalkyler & visuellt material.</p>
+      </div>
     </section>
 
     <!-- Rekommendation -->
     <section>
-      <h2>8. Rekommendation</h2>
-      <ul>
-        <li>Praktiskt arbete med riktiga projekt</li>
-        <li>Stort utrymme för initiativ</li>
-        <li>Lärorikt och stöttande klimat</li>
-      </ul>
+      <div class="frame">
+        <h2>8. Rekommendation</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li>Perfekt praktik för den som vill styra sitt eget schema</li>
+          <li>Flexibilitet – möjlighet att arbeta olika tider & helger vid behov</li>
+          <li>Passar bäst för initiativtagare som trivs utan fasta ramar</li>
+          <li>Mindre lämpligt för den som behöver strikt struktur</li>
+        </ul>
+      </div>
     </section>
 
     <!-- Avslut -->
-    <section data-background="sognefjord.jpg?v=11" data-background-size="cover" data-background-opacity="0.5">
-      <h2 style="color:white;">Tack för mig!</h2>
-      <p style="color:white;">Frågor?</p>
+    <section>
+      <div class="frame">
+        <h2>Tack för mig!</h2>
+        <div class="title-underline"></div>
+        <img src="sognefjord.jpg?v=15" style="width:80%; border-radius:12px; box-shadow:0 4px 18px rgba(0,0,0,0.25);">
+        <p>Frågor?</p>
+      </div>
     </section>
 
   </div>
 </div>
 
-<img src="logo.png?v=11" class="logo" alt="Logo">
+<img src="logo.png?v=15" class="logo-fixed">
 
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js?v=11"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js?v=15"></script>
 <script>
   Reveal.initialize({
     hash: true,
@@ -176,6 +222,5 @@
     pdfMaxPagesPerSlide: 1
   });
 </script>
-
 </body>
-  </html>
+</html>
