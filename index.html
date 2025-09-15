@@ -2,38 +2,34 @@
 <html lang="sv">
   <head>
     <meta charset="utf-8">
-    <title>LIA-presentation – Conri Turesson</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LIA-redovisning – Conri Turesson</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <!-- Reveal.js standard CSS från unpkg -->
-    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.6.2/dist/reset.css">
-    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.6.2/dist/reveal.css">
-    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.6.2/dist/theme/white.css" id="theme">
+    <!-- Reveal.js CSS från cdnjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.2/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.2/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.2/theme/white.min.css">
 
+    <!-- Egen stil -->
     <style>
       body {
-        background: #fdfdfd;
+        font-family: "Open Sans", sans-serif;
       }
-      .reveal h1, .reveal h2, .reveal h3 {
+      h1, h2, h3 {
         color: #1e3a78;
       }
-      .frame {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        padding: 30px;
-        text-align: center;
-      }
-      .title-underline {
-        width: 60px;
-        height: 3px;
-        background: #1e3a78;
-        margin: 12px auto 24px auto;
-      }
-      img {
+      .reveal section img {
         max-width: 80%;
-        border-radius: 10px;
-        margin: 12px 0;
+        height: auto;
+        display: block;
+        margin: 1em auto;
+        border-radius: 12px;
+      }
+      .reveal .slides {
+        text-align: left;
+      }
+      .reveal .slides section {
+        padding: 1em 2em;
       }
     </style>
   </head>
@@ -43,69 +39,134 @@
 
         <!-- Titel -->
         <section>
-          <div class="frame">
-            <h2>LIA-REDOVISNING</h2>
-            <p>TR24HEJKUM • Resekonsult</p>
-            <p><strong>Conri Turesson</strong></p>
-          </div>
+          <h2>LIA-REDOVISNING</h2>
+          <p>TR24HEJKUM • Resekonsult<br>Conri Turesson</p>
         </section>
 
         <!-- Agenda -->
         <section>
-          <div class="frame">
-            <h2>AGENDA</h2>
-            <div class="title-underline"></div>
-            <ol>
-              <li>Företaget</li>
-              <li>Arbetsuppgifter</li>
-              <li>Verktyg & arbetssätt</li>
-              <li>Roligast / Svårast</li>
-              <li>Feedback</li>
-              <li>Lärdomar & nya kompetenser</li>
-              <li>Sekretess & ansvar</li>
-              <li>Jämförelse LIA1 / LIA2</li>
-              <li>Rekommendation</li>
-            </ol>
-          </div>
+          <h2>AGENDA</h2>
+          <ol>
+            <li>Företaget</li>
+            <li>Arbetsuppgifter</li>
+            <li>Verktyg & arbetssätt</li>
+            <li>Roligast / Svårast</li>
+            <li>Feedback</li>
+            <li>Lärdomar & nya kompetenser</li>
+            <li>Sekretess & ansvar</li>
+            <li>Jämförelse LIA1 / LIA2</li>
+            <li>Rekommendation</li>
+          </ol>
         </section>
 
         <!-- Företaget -->
         <section>
-          <div class="frame">
-            <h2>1. FÖRETAGET</h2>
-            <p><strong>Unforgettable Nordic</strong></p>
-            <p>Handledare: Silvia (grundare)</p>
-            <p>Arbetade tillsammans med min kurskamrat April</p>
-            <img src="unforgettable-nordic.png" alt="Unforgettable Nordic">
-          </div>
+          <h2>1. Företaget</h2>
+          <p><b>Unforgettable Nordic</b><br>
+          Handledare: Silvia (grundare)<br>
+          Arbetade tillsammans med min kurskamrat April</p>
+          <img src="unforgettable-nordic.png" alt="Unforgettable Nordic">
         </section>
 
         <!-- Arbetsuppgifter -->
         <section>
-          <div class="frame">
-            <h2>2. ARBETSUPPGIFTER</h2>
-            <ul>
-              <li>Kalkyl i USD – utan & med företagets påslag</li>
-              <li>Reseplaner – skapa offers i Excel/PDF</li>
-              <li>Google Drive – struktur & samarbeta</li>
-              <li>Interna verktyg – (sekretess)</li>
-            </ul>
+          <h2>2. Arbetsuppgifter</h2>
+          <ul>
+            <li>Kalkyl i USD – utan & med företagets påslag</li>
+            <li>Reseplaner – skapa offers / PDF</li>
+            <li>Google Drive – struktur & mappar</li>
+            <li>Interna verktyg (sekretess)</li>
+          </ul>
+        </section>
+
+        <!-- Verktyg & arbetssätt -->
+        <section>
+          <h2>3. Verktyg & arbetssätt</h2>
+          <div style="display: flex; gap: 2em;">
+            <div>
+              <h3>Verktyg</h3>
+              <ul>
+                <li>Google Docs</li>
+                <li>Google Kalkylblad</li>
+                <li>Canva</li>
+                <li>Drive & interna verktyg</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Arbetssätt</h3>
+              <ul>
+                <li>Min struktur (från LIA1)</li>
+                <li>Mallar & "done"-mappar per kund</li>
+                <li>Tydliga filnamn & versionshantering</li>
+              </ul>
+            </div>
           </div>
         </section>
 
-        <!-- osv... resten av slides (verktyg, feedback, lärdomar, jämförelse, rekommendation, tack) -->
+        <!-- Roligast / Svårast -->
         <section>
-          <div class="frame">
-            <h2>TACK FÖR MIG!</h2>
-            <img src="fjord.jpg" alt="Fjord">
-          </div>
+          <h2>4. Roligast / Svårast</h2>
+          <p><b>Roligast:</b> kreativt arbete i Canva & reseplanering</p>
+          <p><b>Svårast:</b> prissättning, kalkyl & budget</p>
+          <p><i>Tränar genom att skapa & prissätta egna små resplaner.</i></p>
+        </section>
+
+        <!-- Feedback -->
+        <section>
+          <h2>5. Feedback</h2>
+          <ul>
+            <li>Snabb inlärning & självständighet uppskattades</li>
+            <li>Flexibel, tar initiativ & håller struktur</li>
+            <li>Behöver mer träning i marginaler och prissättning</li>
+          </ul>
+        </section>
+
+        <!-- Lärdomar -->
+        <section>
+          <h2>6. Lärdomar & nya kompetenser</h2>
+          <ul>
+            <li>Praktisk branschvana & kundanpassade reseplaner</li>
+            <li>Bygga upp USD/SEK, säljbar kalkyl</li>
+            <li>Drive-struktur som kan återanvändas</li>
+          </ul>
+        </section>
+
+        <!-- Sekretess -->
+        <section>
+          <h2>7. Sekretess & ansvar</h2>
+          <ul>
+            <li>Delar inte interna system, data eller kundfiler</li>
+            <li>Följer riktlinjer: skyddar information</li>
+            <li>Hanterar material på skolnivå</li>
+          </ul>
+        </section>
+
+        <!-- Jämförelse -->
+        <section>
+          <h2>8. Jämförelse LIA1 / LIA2</h2>
+          <ul>
+            <li><b>LIA1:</b> mer introduktion, enklare uppgifter</li>
+            <li><b>LIA2:</b> mer ansvar, egna offers, tät kontakt med handledare</li>
+          </ul>
+        </section>
+
+        <!-- Rekommendation -->
+        <section>
+          <h2>9. Rekommendation</h2>
+          <p>Praktiken passar någon som vill styra eget schema, är flexibel och tar initiativ.<br>
+          Mindre rätt för den som behöver fasta uppgifter & tydliga ramar hela tiden.</p>
+        </section>
+
+        <!-- Slut -->
+        <section data-background-image="fjord.jpg" data-background-size="cover">
+          <h2 style="color: white; text-shadow: 2px 2px 4px black;">Tack för mig!</h2>
         </section>
 
       </div>
     </div>
 
-    <!-- Reveal.js script från unpkg -->
-    <script src="https://unpkg.com/reveal.js@4.6.2/dist/reveal.js"></script>
+    <!-- Reveal.js script från cdnjs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.2/reveal.min.js"></script>
     <script>
       window.addEventListener("load", () => {
         if (window.Reveal) {
